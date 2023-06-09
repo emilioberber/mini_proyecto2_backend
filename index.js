@@ -82,8 +82,7 @@ app.get("/", (req, res)=>{
     res.send ("running")
 });
 
-const port = 3001;
-
-app.listen(port, ()=>{
-    console.log(`Corriendo en el puerto ${port}`)
+const server = app.listen(process.env.PORT || 3001, () => {
+    const port = server.address().port;
+    console.log(`Working on port ${port}`);
 });
