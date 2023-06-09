@@ -77,6 +77,11 @@ app.delete("/delete/:id", (req, res)=>{
     );
 });
 
+// HTTP: GET
+app.get("/", (req, res)=>{
+    res.send ("running")
+});
+
 const port = 3001;
 
 app.listen(port, ()=>{
